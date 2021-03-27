@@ -1,5 +1,5 @@
-import LayoutInfo from './LayoutInfo';
-import LayoutSelect from './LayoutSelect'
+import LayoutInfo from './Layout/LayoutInfo';
+import LayoutSelect from './Layout/LayoutSelect'
 function App() {
   return (
     <>

@@ -1,11 +1,17 @@
 import { useState, useCallback } from 'react';
 import styled from 'styled-components';
-import { AddOptionWeapon, AddOptionAcc, Step } from '../ArrayList/BonusStatsList';
+import { AddOptionWeapon, AddOptionAcc } from '../ArrayList/BonusStatsList';
 
 const SelectBox = styled.div`
   border: 1px solid black;
   margin: 10px;
   padding: 10px;
+`;
+
+const Delete = styled.div`
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
 `;
 
 function SelectAcc({ onChange, value }) {
@@ -66,7 +72,6 @@ const SelectExpendAcc = () => {
     }, [])
 
     const handelChangeOption = value => {
-        console.log(value.value);
         const key = makeKey(10);
         setSelectValues([...selectValues, { ...value, key }]);
         setIsNotVisible(value.value === "none");
@@ -74,10 +79,16 @@ const SelectExpendAcc = () => {
 
     const handleChangeInnerSelectClosure = key => {
         return value => {
-            
             setSelectValues(selectValues.map(selectValue => (
                 selectValue.key === key ? { key, ...value } : selectValue
             )));
+        }
+    }
+
+    const handleDeleteInnerSelectClosure = key => {
+
+        return () => {
+            setSelectValues(selectValues.filter(selectValue => selectValue.key !== key));
         }
     }
 
@@ -91,6 +102,7 @@ const SelectExpendAcc = () => {
                         onChange={handleChangeInnerSelectClosure(selectValue.key)}
                     />
                     <p>text : { selectValue.text } length : { selectValues.length } Bool : { isNotVisible.toString() }</p>
+                    <Delete onClick={handleDeleteInnerSelectClosure(selectValue.key)}>삭제</Delete>
                 </SelectBox>
                 )
             )}
@@ -130,6 +142,13 @@ const SelectExpendWeapon = () => {
         }
     }
 
+    const handleDeleteInnerSelectClosure = key => {
+
+        return () => {
+            setSelectValues(selectValues.filter(selectValue => selectValue.key !== key));
+        }
+    }
+
     return (
         <>
             {selectValues.map(selectValue => (
@@ -140,6 +159,7 @@ const SelectExpendWeapon = () => {
                         onChange={handleChangeInnerSelectClosure(selectValue.key)}
                     />
                     <p>text : { selectValue.text } length : { selectValues.length } Bool : { isNotVisible.toString() }</p>
+                    <Delete onClick={handleDeleteInnerSelectClosure(selectValue.key)}>삭제</Delete>
                 </SelectBox>
                 )
             )}
