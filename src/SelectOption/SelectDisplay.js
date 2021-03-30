@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Select from './Select';
 import { ObjectList, WeaponList, AccList, WeaponSort, AccSort } from '../ArrayList/ObjectList';
 import SelectCompare from './SelectCompare';
-import { SelectExpendAcc, SelectExpendWeapon } from './SelectExpend';
+import SelectExpendAcc from './SelectExpendAcc';
+import SelectExpendWeapon from './SelectExpendWeapon';
 
 const WeaponListDisplay = () => {
     const [ selectWeaponValue, setSelectWeaponValue ] = useState('');
