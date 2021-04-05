@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Select from './Select';
 
 function SelectListDisplay(props) {
+    
     const [ selectListValue, setSelectListValue ] = useState('');
 
     const [ selectSortListValue, setSelectSortListValue ] = useState('');
@@ -13,8 +14,6 @@ function SelectListDisplay(props) {
     const handleChangeSortList = ({ target: { value } }) => {
         setSelectSortListValue(value);
     };
-    
-    console.log(props.options)
 
     return(
         <div>

@@ -8,7 +8,7 @@ function SelectCompare({value}) {
     return(
         <>
             <SelectListDisplay options={ displayLists[value] }/>
-            {/* <SelectBox options={ boxLists[value] }/> */}
+            <SelectBox options={ boxLists[value] }/>
         </>
     )
 }
@@ -24,7 +24,7 @@ const displayLists = {
     },
 };
 
-const boxLists= {
+const boxLists = {
     weapon: AddOptionWeapon,
     acc: AddOptionAcc
 }

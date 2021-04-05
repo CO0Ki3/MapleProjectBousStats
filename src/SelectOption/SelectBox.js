@@ -1,6 +1,5 @@
-import { useState } from 'react'
 import styled from 'styled-components';
-import SelectExpend from './SelectExpend';
+import SelectOption from './SelectOpiton';
 
 const SelectBoxStyle = styled.div`
   border: 1px solid black;
@@ -10,16 +9,19 @@ const SelectBoxStyle = styled.div`
 
 function SelectBox(props) {
 
-    // const [ listValue, setListValue ] = useState();
-
-    // const handelChangeListValue = ({ target: value }) => {
-    //     onChange(props.options.filter(optionList => optionList.value === value)[0]);
-    // }
+    {
+        props.options === undefined ||
+        console.log(props.options)
+    }
 
     return (
-        <SelectBoxStyle >
-            {/* <SelectExpend /> */}
-        </SelectBoxStyle>
+        <>
+            { props.options === undefined || 
+                <SelectBoxStyle >
+                    <SelectOption lists={ props.options } />
+                </SelectBoxStyle>
+            }
+        </>
     )
 }
 
