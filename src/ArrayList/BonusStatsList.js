@@ -101,28 +101,28 @@ const AddOptionSortAcc = [
 
 const Step = [
     {
-        step: "",
-        text: "선택 안함"
+        value: "",
+        text: "Select"
     },
     {
-        step: "first",
+        value: "first",
         text: "1추"
     },
     {
-        step: "second",
-        stext: "2추"
+        value: "second",
+        text: "2추"
     },
     {
-        step: "third",
-        stext: "3추"
+        value: "third",
+        text: "3추"
     },
     {
-        step: "forth",
-        stext: "4추"
+        value: "forth",
+        text: "4추"
     },
     {
-        step: "fifth",
-        stext: "5추"
+        value: "fifth",
+        text: "5추"
     }
 ];
 
