@@ -57,13 +57,12 @@ function SelectBox(props) {
         <>
             { props.options === undefined || selectValues.map(selectValue => (
                 <SelectBoxStyle key={ selectValue.key }>
-                    <SelectOption />
-                    <SelectStep />
+                    <SelectOption lists={props.options} onChange={handleChangeInnerSelectClosure(selectValue.key)}/>
+                    <SelectStep onChange={handleChangeInnerSelectClosure(selectValue.key)}/>
                     <Delete onClick={handleDeleteInnerSelectClosure(selectValue.key)}>삭제</Delete>
                 </SelectBoxStyle>
-            ))
-                
-            }
+            ))}
+            { props.options === undefined || selectValues.length === 4 || isVisible === false || <SelectBoxStyle><SelectOption onChange={handleChangeOption} lists={ props.options } value='select' /><SelectStep onChange={ handleChangeStep } /></SelectBoxStyle> }
         </>
     )
 }
