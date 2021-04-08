@@ -38,9 +38,10 @@ function SelectBox(props) {
         }
     };
 
+
     const handleDeleteInnerSelectClosure = key => {
 
-        return() => {
+        return () => {
             setSelectValues(selectValues.filter(selectValue => selectValue.key !== key));
         }
     }
@@ -51,12 +52,12 @@ function SelectBox(props) {
                 <SelectBoxStyle key={ selectValue.key }>
                     <SelectOption lists={props.options} onChange={handleChangeInnerSelectClosure(selectValue.key)} value={ selectValue.value }/>
                     <p>Value : { selectValue.value }</p>
-                    {/* <SelectStep onChange={handleChangeInnerStepClosure(selectValue.key)}/>
+                    {/* <SelectStep onChange={handleChangeInnerSelectClosure(selectValue.key)} value={ selectValue.value }/>
                     <p>Step : { selectValue.step }</p> */}
                     <Delete onClick={handleDeleteInnerSelectClosure(selectValue.key)}>삭제</Delete>
                 </SelectBoxStyle>
             ))}
-            {/* { props.options === undefined || selectValues.length === 4 || isVisible === false || <SelectBoxStyle><SelectOption onChange={handleChangeOption} lists={ props.options } /><SelectStep onChange={ handleChangeStep } /></SelectBoxStyle> } */}
+            {/* { props.options === undefined || selectValues.length === 4 || isVisible === false || <SelectBoxStyle><SelectOption onChange={handleChangeOption} lists={ props.options } value='Select'/><SelectStep onChange={ handleChangeOption } /></SelectBoxStyle> } */}
             { props.options === undefined || selectValues.length === 4 || isVisible === false || <SelectBoxStyle><SelectOption onChange={handleChangeOption} lists={ props.options } value='Select'/></SelectBoxStyle> }
         </>
     )
