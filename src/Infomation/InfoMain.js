@@ -5,6 +5,7 @@ import { createMuiTheme, Link, MuiThemeProvider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core';
 
 const theme = createMuiTheme({
+  
   box: {
     marginTop: "24px",
     marginBottom: "24px",
