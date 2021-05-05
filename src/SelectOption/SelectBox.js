@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import SelectTemp from "./SelectTemp";
 import Step from "../ArrayList/StepList";
 import { SelectBoxStyle } from './SelectStyle'
-
+import LayoutCalc from '../Layout/LayoutCalc';
 
 const Delete = styled.div`
   color: blue;
@@ -101,6 +101,7 @@ function SelectBox(props) {
           <Delete onClick={handleDeleteInnerSelectClosure(selectValue.key)}>
             삭제
           </Delete>
+          <LayoutCalc value={selectValue.step.value} key_={selectValues[0].key}/>
         </SelectBoxStyle>
       ))}
       {selectValues.length === 4 || (

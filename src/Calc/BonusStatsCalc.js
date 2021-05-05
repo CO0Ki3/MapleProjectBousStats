@@ -1,3 +1,0 @@
-function BonusStatsCalc({ optionValue, stepValue }) {
-    
-}
