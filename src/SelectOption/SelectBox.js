@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { v4 as uuidv4 } from "uuid";
 import SelectTemp from "./SelectTemp";
 import Step from "../ArrayList/StepList";
-import { SelectBoxStyle } from './SelectStyle'
-import LayoutCalc from '../Layout/LayoutCalc';
+import { SelectBoxStyle } from "./SelectStyle";
+import LayoutCalc from "../Layout/LayoutCalc";
+import Temp from "../Calc/Temp";
 
 const Delete = styled.div`
   color: blue;
@@ -86,7 +87,8 @@ function SelectBox(props) {
     <>
       {selectValues.map((selectValue) => (
         <SelectBoxStyle key={selectValue.key}>
-          <SelectTemp select_option
+          <SelectTemp
+            select_option
             lists={options}
             onChange={handleChangeInnerOptionClosure(selectValue.key)}
             value={selectValue.option}
@@ -100,8 +102,7 @@ function SelectBox(props) {
           <p>Step : {selectValue.step.text}</p>
           <Delete onClick={handleDeleteInnerSelectClosure(selectValue.key)}>
             삭제
-          </Delete>
-          <LayoutCalc value={selectValue.step.value} key_={selectValues[0].key}/>
+          </Delete> <p>(나중에 아이콘으로 바꾸기)</p>
         </SelectBoxStyle>
       ))}
       {selectValues.length === 4 || (
@@ -113,6 +114,8 @@ function SelectBox(props) {
           />
         </SelectBoxStyle>
       )}
+      
+      <p>여기에 결과값</p>
     </>
   );
 }
