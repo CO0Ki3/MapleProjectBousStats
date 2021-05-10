@@ -4,8 +4,6 @@ import { v4 as uuidv4 } from "uuid";
 import SelectTemp from "./SelectTemp";
 import Step from "../ArrayList/StepList";
 import { SelectBoxStyle } from "./SelectStyle";
-import LayoutCalc from "../Layout/LayoutCalc";
-import Temp from "../Calc/Temp";
 
 const Delete = styled.div`
   color: blue;
