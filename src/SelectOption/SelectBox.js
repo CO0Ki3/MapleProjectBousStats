@@ -55,12 +55,12 @@ function SelectBox(props) {
   };
 
   const handleChangeInnerOptionClosure = (key) => {
-    return (value) => {
-      setSelectValues(
-        selectValues.map((selectValue) =>
-          selectValue.key === key
+    return () => {
+      setSelectValues((prev) =>
+        prev.map((value) =>
+          value.key === key
             ? { key, option: value, step: { value: "", text: "Select" } }
-            : selectValue
+            : value
         )
       );
     };
@@ -105,7 +105,8 @@ function SelectBox(props) {
           <p>Step : {selectValue.step.text}</p>
           <Delete onClick={handleDeleteInnerSelectClosure(selectValue.key)}>
             삭제
-          </Delete> <p>(나중에 아이콘으로 바꾸기)</p>
+          </Delete>{" "}
+          <p>(나중에 아이콘으로 바꾸기)</p>
           <StepContext.Provider value={selectValue.step.value}>
             <OptionContext.Provider value={selectValue.option.value}>
               <Temp />
@@ -122,7 +123,7 @@ function SelectBox(props) {
           />
         </SelectBoxStyle>
       )}
-      
+
       <p>여기에 결과값</p>
     </>
   );
