@@ -13,7 +13,6 @@ function SelectDisplay() {
   return (
     <div>
       <Select onChange={handleChangeObjectValue} options={ObjectList} />
-      <p>Object : {selectObjectValue}</p>
       <SelectCompare value={selectObjectValue} />
     </div>
   );
