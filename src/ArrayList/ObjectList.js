@@ -11,20 +11,24 @@ const ObjectList = [
 
 const WeaponList = [
   {
-    value: "lv150Weap",
+    value: "150",
     text: "Lv.150 : 파프니르, 해방된 카이세리움",
+    id: 0,
   },
   {
-    value: "lv160Weap",
+    value: "160",
     text: "Lv.160 : 앱솔랩스",
+    id: 1,
   },
   {
-    value: "lv200WeapAcc",
+    value: "200",
     text: "Lv.200 : 아케인셰이드",
+    id: 2,
   },
   {
-    value: "lv200WeapGene",
+    value: "200",
     text: "Lv.200 : 제네시스",
+    id: 3,
   },
 ];
 
