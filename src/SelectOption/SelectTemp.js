@@ -11,10 +11,9 @@ const nativeSelectStyles = makeStyles({
     },
     "&.MuiInputBase-root": {
       color: "white",
+      // marginLeft: "15px",
+      // marginRight: "15px",
     },
-    // "&.MuiNativeSelect-icon": {
-    //   color: "white",
-    // },
   }
 })
 

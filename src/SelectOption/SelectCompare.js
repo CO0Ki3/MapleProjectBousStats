@@ -10,12 +10,13 @@ import {
   AddOptionWeapon,
   AddOptionAcc,
 } from "../ArrayList/BonusStatsList";
+import { Main } from "./SelectStyle";
 
 function SelectCompare({ value }) {
   if(value) {
     return (
       <>
-        <SelectListDisplay options={displayLists[value]} />
+        <Main><SelectListDisplay options={displayLists[value]} /></Main>
         <SelectBox options={boxLists[value]} />
       </>
     );

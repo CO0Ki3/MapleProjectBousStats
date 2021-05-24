@@ -1,16 +1,11 @@
-import React, { useState, useEffect, createContext } from "react";
-import styled from "styled-components";
+import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
+import styled from 'styled-components';
 import SelectTemp from "./SelectTemp";
 import Step from "../ArrayList/StepList";
-import { SelectBoxStyle } from "./SelectStyle";
+import { SelectBoxStyle, Main } from "./SelectStyle";
 import { useStore } from '../hook';
-
-const Delete = styled.div`
-  color: blue;
-  cursor: pointer;
-  text-decoration: underline;
-`;
+import DeleteIcon from '@material-ui/icons/Delete';
 
 function SelectBox(props) {
   const [selectValues, setSelectValues] = useState([]);
@@ -96,34 +91,33 @@ function SelectBox(props) {
     <>
       {selectValues.map((selectValue) => (
         <SelectBoxStyle key={selectValue.key}>
-          <SelectTemp
-            select_option
-            lists={options}
-            onChange={handleChangeInnerOptionClosure(selectValue.key)}
-            value={selectValue.option}
-          />
-          <SelectTemp
-            lists={Step}
-            onChange={handleChangeInnerStepClosure(selectValue.key)}
-            value={selectValue.step}
-          />
-          <Delete onClick={handleDeleteInnerSelectClosure(selectValue.key)}>
-            삭제
-          </Delete>{" "}
-          <p>(나중에 아이콘으로 바꾸기)</p>
+          <Main>
+            <SelectTemp
+              select_option
+              lists={options}
+              onChange={handleChangeInnerOptionClosure(selectValue.key)}
+              value={selectValue.option}
+            />
+            <SelectTemp
+              lists={Step}
+              onChange={handleChangeInnerStepClosure(selectValue.key)}
+              value={selectValue.step}
+            />
+            <DeleteIcon onClick={handleDeleteInnerSelectClosure(selectValue.key)} />
+          </Main>
         </SelectBoxStyle>
       ))}
       {selectValues.length === 4 || (
         <SelectBoxStyle>
-          <SelectTemp
-            onChange={handleChangeOption}
-            lists={options}
-            value={{ value: "", text: "Select" }}
-          />
+          <Main>
+            <SelectTemp
+              onChange={handleChangeOption}
+              lists={options}
+              value={{ value: "", text: "Select" }}
+            />
+          </Main>
         </SelectBoxStyle>
       )}
-
-      <p>여기에 결과값</p>
     </>
   );
 }
