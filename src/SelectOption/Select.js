@@ -25,14 +25,19 @@ function Select({ onChange, options }) {
         <option disabled value="">
           Select
         </option>
-        {options.map((options, id) => (
-          <option value={options.value} key={id}>
+        {options.map((options) => (
+          <option value={valueCompare(options)} key={options.text}>
             {options.text}
           </option>
         ))}
       </NativeSelect>
     </div>
   );
+
+  function valueCompare(options) {
+    if(options.value === "weapon" || options.value === "acc") return options.value;
+    else return [options.value, options.group];
+  }
 }
 
 export default Select;
