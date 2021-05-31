@@ -1,148 +1,141 @@
 const WeaponAttList = {
-  lv150: {
-    one: {
+  0: {
+    1: {
       first: 36,
       second: 28,
       third: 21,
       forth: 16,
       fifth: 11,
     },
-    two: {
+    2: {
       first: 52,
       second: 40,
       third: 31,
       forth: 22,
       fifth: 15,
     },
-    three: {
+    3: {
       first: 53,
       second: 41,
       third: 31,
       forth: 23,
       fifth: 16,
     },
-    four: {
+    4: {
       first: 63,
       second: 49,
       third: 38,
       forth: 27,
       fifth: 19,
     },
-    five: {
+    5: {
       first: 66,
       second: 52,
       third: 39,
       forth: 29,
       fifth: 20,
     },
-    six: {
+    6: {
       first: 68,
       second: 53,
       third: 40,
       forth: 29,
       fifth: 20,
     },
-    seven: {
+    7: {
       first: 71,
       second: 55,
       third: 42,
       forth: 31,
       fifth: 21,
     },
-    eight: {
+    8: {
       first: 72,
       second: 56,
       third: 43,
       forth: 31,
       fifth: 21,
     },
-    nine: {
+    9: {
       first: 83,
       second: 65,
       third: 49,
       forth: 36,
       fifth: 25,
     },
-    ten: {
+    10: {
       first: 84,
       second: 66,
       third: 50,
       forth: 36,
       fifth: 25,
     },
-    // kai: {
-    //   first: 118,
-    //   second: 86,
-    //   third: 59,
-    //   forth: 36,
-    //   fifth: 16,
-    // },
   },
-  lv160: {
-    one: {
+  1: {
+    1: {
       first: 53,
       second: 42,
       third: 32,
       forth: 23,
       fifth: 16,
     },
-    two: {
+    2: {
       first: 77,
       second: 60,
       third: 46,
       forth: 33,
       fifth: 23,
     },
-    three: {
+    3: {
       first: 79,
       second: 62,
       third: 47,
       forth: 34,
       fifth: 23,
     },
-    four: {
+    4: {
       first: 95,
       second: 74,
       third: 56,
       forth: 41,
       fifth: 28,
     },
-    five: {
+    5: {
       first: 99,
       second: 77,
       third: 59,
       forth: 43,
       fifth: 29,
     },
-    six: {
+    6: {
       first: 101,
       second: 79,
       third: 60,
       forth: 44,
       fifth: 30,
     },
-    seven: {
+    7: {
       first: 106,
       second: 82,
       third: 63,
       forth: 46,
       fifth: 31,
     },
-    eight: {
+    8: {
       first: 108,
       second: 84,
       third: 64,
       forth: 47,
       fifth: 32,
     },
-    nine: {
+    9: {
       first: 124,
       second: 97,
       third: 73,
       forth: 54,
       fifth: 37,
     },
-    ten: {
+    0: {
       first: 126,
       second: 98,
       third: 75,
@@ -150,71 +143,71 @@ const WeaponAttList = {
       fifth: 37,
     },
   },
-  lv200Acc: {
-    one: {
+  2: {
+    1: {
       first: 92,
       second: 72,
       third: 55,
       forth: 40,
       fifth: 27,
     },
-    two: {
+    2: {
       first: 133,
       second: 104,
       third: 79,
       forth: 58,
       fifth: 39,
     },
-    three: {
+    3: {
       first: 136,
       second: 106,
       third: 81,
       forth: 59,
       fifth: 40,
     },
-    four: {
+    4: {
       first: 163,
       second: 127,
       third: 96,
       forth: 70,
       fifth: 48,
     },
-    five: {
+    5: {
       first: 170,
       second: 133,
       third: 101,
       forth: 73,
       fifth: 50,
     },
-    six: {
+    6: {
       first: 175,
       second: 136,
       third: 103,
       forth: 75,
       fifth: 51,
     },
-    seven: {
+    7: {
       first: 182,
       second: 142,
       third: 108,
       forth: 78,
       fifth: 54,
     },
-    eight: {
+    8: {
       first: 186,
       second: 145,
       third: 110,
       forth: 80,
       fifth: 55,
     },
-    nine: {
+    9: {
       first: 214,
       second: 167,
       third: 126,
       forth: 92,
       fifth: 63,
     },
-    ten: {
+    0: {
       first: 218,
       second: 170,
       third: 129,
@@ -222,71 +215,71 @@ const WeaponAttList = {
       fifth: 64,
     },
   },
-  lv200Gene: {
-    one: {
+  3: {
+    1: {
       first: 106,
       second: 83,
       third: 72,
       forth: 46,
       fifth: 31,
     },
-    two: {
+    2: {
       first: 154,
       second: 120,
       third: 91,
       forth: 66,
       fifth: 45,
     },
-    three: {
+    3: {
       first: 157,
       second: 123,
       third: 106,
       forth: 68,
       fifth: 46,
     },
-    four: {
+    4: {
       first: 187,
       second: 146,
       third: 111,
       forth: 81,
       fifth: 55,
     },
-    five: {
+    5: {
       first: 196,
       second: 153,
       third: 116,
       forth: 84,
       fifth: 58,
     },
-    six: {
+    6: {
       first: 201,
       second: 157,
       third: 119,
       forth: 87,
       fifth: 59,
     },
-    seven: {
+    7: {
       first: 210,
       second: 164,
       third: 124,
       forth: 90,
       fifth: 62,
     },
-    eight: {
+    8: {
       first: 215,
       second: 167,
       third: 127,
       forth: 92,
       fifth: 63,
     },
-    nine: {
+    9: {
       first: 246,
       second: 192,
       third: 146,
       forth: 106,
       fifth: 72,
     },
-    ten: {
+    0: {
       first: 250,
       second: 195,
       third: 148,

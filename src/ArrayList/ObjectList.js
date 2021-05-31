@@ -13,22 +13,22 @@ const WeaponList = [
   {
     value: "150",
     text: "Lv.150 : 파프니르, 해방된 카이세리움",
-    id: 0,
+    group: 0,
   },
   {
     value: "160",
     text: "Lv.160 : 앱솔랩스",
-    id: 1,
+    group: 1,
   },
   {
     value: "200",
     text: "Lv.200 : 아케인셰이드",
-    id: 2,
+    group: 2,
   },
   {
     value: "200",
     text: "Lv.200 : 제네시스",
-    id: 3,
+    group: 3,
   },
 ];
 
@@ -36,157 +36,157 @@ const WeaponSort = [
   {
     value: "gards",
     text: "아대",
-    group: "one",
+    group: 1,
   },
   {
     value: "gun",
     text: "건",
-    group: "two",
+    group: 2,
   },
   {
     value: "knuckle",
     text: "너클",
-    group: "three",
+    group: 3,
   },
   {
     value: "soul",
     text: "소울 슈터",
-    group: "three",
+    group: 3,
   },
   {
     value: "energysword",
     text: "에너지 소드",
-    group: "three",
+    group: 3,
   },
   {
     value: "revolver",
     text: "리볼버",
-    group: "three",
+    group: 3,
   },
   {
     value: "polearm",
     text: "폴암",
-    group: "four"
+    group: 4
   },
   {
     value: "bow",
     text: "활",
-    group: "five",
+    group: 5,
   },
   {
     value: "dualgun",
     text: "듀얼보우건",
-    group: "five",
+    group: 5,
   },
   {
     value: "shooter",
     text: "브레스 슈터",
-    group: "five",
+    group: 5,
   },
   {
     value: "fan",
     text: "부채",
-    group: "five",
+    group: 5,
   },
   {
     value: "ancientbow",
     text: "에이션트 보우",
-    group: "five",
+    group: 5,
   },
   {
     value: "chain",
     text: "체인",
-    group: "five",
+    group: 5,
   },
   {
     value: "dagger",
     text: "단검",
-    group: "five"
+    group: 5
   },
   {
     value: "sword",
     text: "한손검",
-    group: "six",
+    group: 6,
   },
   {
     value: "ax",
     text: "한손도끼",
-    group: "six",
+    group: 6,
   },
   {
     value: "hammer",
     text: "한손둔기",
-    group: "six",
+    group: 6,
   },
   {
     value: "crossbow",
     text: "석궁",
-    group: "six",
+    group: 6,
   },
   {
     value: "cane",
     text: "케인",
-    group: "six",
+    group: 6,
   },
   {
     value: "twohandsword",
     text: "두손검",
-    group: "seven",
+    group: 7,
   },
   {
     value: "desperado",
     text: "데스페라도",
-    group: "seven",
+    group: 7,
   },
   {
     value: "twohandsax",
     text: "두손도끼",
-    group: "seven",
+    group: 7,
   },
   {
     value: "twohandshammer",
     text: "두손둔기",
-    group: "seven",
+    group: 7,
   },
   {
     value: "spear",
     text: "창",
-    group: "seven",
+    group: 7,
   },
   {
     value: "bladecaster",
     text: "튜너",
-    group: "seven",
+    group: 7,
   },
   {
     value: "handcannon",
     text: "핸드캐논",
-    group: "eight",
+    group: 8,
   },
   {
     value: "wand",
     text: "완드",
-    group: "nine",
+    group: 9,
   },
   {
     value: "shining",
     text: "샤이닝로드",
-    group: "nine",
+    group: 9,
   },
   {
     value: "esp",
     text: "ESP리미터",
-    group: "nine",
+    group: 9,
   },
   {
     value: "magicgauntlet",
     text: "매직 건틀렛",
-    group: "nine",
+    group: 9,
   },
   {
     value: "staff",
     text: "스태프",
-    group: "ten",
+    group: 0,
   },
   // {
   //   value: "kai",
@@ -238,6 +238,7 @@ const AccSort = [
   {
     value: "boss",
     text: "보스 장비(단, 혼목, 카혼목, 카벨뚝 제외)",
+    group: 0,
   },
   // {
   //   value: "notboss",
