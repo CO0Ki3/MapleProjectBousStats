@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 export const StoreContext = React.createContext(null);
 
 const initialStore = {
+  first: "",
   list: "",
   sort: "",
   box: [],
