@@ -1,15 +1,17 @@
 const EternalPercent = {
-  "7": 0.01,
-  "6": 0.25,
-  "5": 0.45,
-  "4": 0.29,
+  sev: 0.01,
+  six: 0.25,
+  fiv: 0.45,
+  fou: 0.29,
+  none: 1,
 };
 
 const PowerfulPercent = {
-  "6": 0.14,
-  "5": 0.36,
-  "4": 0.3,
-  "3": 0.2,
+  six: 0.14,
+  fiv: 0.36,
+  fou: 0.3,
+  the: 0.2,
+  none: 1,
 };
 
-export { EternalPercent, PowerfulPercent }; 
+export { EternalPercent, PowerfulPercent };
