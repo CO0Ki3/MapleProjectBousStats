@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
-import styled from 'styled-components';
 import SelectTemp from "./SelectTemp";
 import Step from "../ArrayList/StepList";
 import { SelectBoxStyle, Main } from "./SelectStyle";
@@ -17,24 +16,11 @@ function SelectBox(props) {
     const selectOptionValues = selectValues.map(
       (selectValue) => selectValue.option.value
     );
-
-    if (
-      selectOptionValues.some(
-        (v) => ["str", "dex", "int", "luk"].indexOf(v) > -1
+    setOptions(
+      props.options.filter(
+        (option) => !selectOptionValues.includes(option.value)
       )
-    ) {
-      setOptions(
-        props.options
-          .slice(4)
-          .filter((option) => !selectOptionValues.includes(option.value))
-      );
-    } else {
-      setOptions(
-        props.options.filter(
-          (option) => !selectOptionValues.includes(option.value)
-        )
-      );
-    }
+    );
   }, [selectValues, props.options]);
 
   const handleChangeOption = (value) => {
